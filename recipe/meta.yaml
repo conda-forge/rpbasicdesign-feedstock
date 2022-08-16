@@ -10,7 +10,7 @@ source:
   sha256: 9d42e03af416448acc6d5b2e758716ed3671e50bb81eb2bee4d1c94f1331d281
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install -vv .
 
@@ -28,6 +28,7 @@ test:
     - tests
   imports:
     - {{ name|lower }}
+    - cobra
   requires:
     - pytest
   commands:
